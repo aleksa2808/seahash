@@ -195,8 +195,8 @@ impl Hasher for SeaHasher {
         self.write(&n.to_le_bytes())
     }
 
-    fn write_usize(&mut self, n: usize) {
-        self.write(&n.to_le_bytes())
+    fn write_usize(&mut self, _n: usize) {
+        panic!("usize used");
     }
 
     fn write_i64(&mut self, n: i64) {
@@ -215,8 +215,8 @@ impl Hasher for SeaHasher {
         self.write(&n.to_le_bytes())
     }
 
-    fn write_isize(&mut self, n: isize) {
-        self.write(&n.to_le_bytes())
+    fn write_isize(&mut self, _n: isize) {
+        panic!("isize used");
     }
 }
 
